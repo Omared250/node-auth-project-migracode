@@ -53,6 +53,25 @@
 
 .home-page h1, p {
   margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.home-page > .buttons {
+  margin-top: 1em;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-page > .buttons > button {
+  width: 10em;
+  padding: 1em;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(4, 165, 18);
+  color: white;
+  font-weight: 600;
 }
 
 .sing {
