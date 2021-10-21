@@ -36,3 +36,79 @@
     transform: rotate(360deg);
   }
 }
+
+.home-page {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./home-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-page h1, p {
+  margin: 0;
+}
+
+.sing {
+  width: 20%;
+  padding: 2em;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.sing * {
+  margin: 0;
+}
+
+.sing h2 {
+  margin-bottom: 0.5em;
+}
+
+.sing > form .inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sing > form .inputs > label {
+  display: flex;
+  justify-self: start;
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.sing > form .inputs > input {
+  height: 1.5em;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.sing > form .check {
+  margin-top: 0.5em;
+}
+
+.sing > form .check > input {
+  margin-right: 1em;
+}
+
+.sing button {
+  margin-top: 1em;
+  width: 100%;
+  height: 2em;
+  background-color: #ec7614;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+}
