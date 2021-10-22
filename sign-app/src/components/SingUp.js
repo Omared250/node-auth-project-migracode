@@ -4,7 +4,7 @@ const SingUp = () => {
     return (
         <div className='sing'>
             <h2>Sing Up</h2> 
-            <p>Welcom! Please create your acount</p>
+            <p>Welcome! Please create your acount</p>
             <form>
                 <div className='inputs'>
                     <label>Name</label>

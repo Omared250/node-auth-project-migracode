@@ -4,7 +4,7 @@ const SingIn = () => {
     return (
         <div className='sing'>
             <h2>Sing In</h2> 
-            <p>Welcom Back! Please login to your acount</p>
+            <p>Welcome Back! Please login to your acount</p>
             <form>
                 <div className='inputs'>
                     <label htmlFor='email'>Email</label>
