@@ -1,6 +1,9 @@
 import React from "react";
 
 const SingIn = () => {
+
+    
+
     return (
         <div className='sing'>
             <h2>Sing In</h2> 
