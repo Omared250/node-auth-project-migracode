@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { onSingIn } from "../request/users";
+import { Link } from "react-router-dom";
 
 const SingIn = () => {
     const [email, setEmail] = useState('');
@@ -45,7 +46,8 @@ const SingIn = () => {
                     <input type='checkbox' htmlFor='rememberMe'></input>
                     <label id='rememberMe'>Remember me!</label>
                 </div>
-                <button type='submit' onClick={onSignInClicked}>SING IN</button>
+                <button onClick={onSignInClicked}>SING IN</button>
+                <div><Link to='/' className='button'>Home</Link></div>
                 <div>{data}</div>
             </form>
         </div>

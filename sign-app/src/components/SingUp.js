@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { onSignUp } from "../request/users";
 
 const SingUp = () => {
@@ -51,6 +52,7 @@ const SingUp = () => {
                     />
                 </div>
                 <button onClick={onSignUpClicked}>CREATE ACCOUNT</button>
+                <div><Link to='/' className='button'>Home</Link></div>
                 <div>{data}</div>
             </form>
         </div>

@@ -6,7 +6,7 @@ import SingUp from './components/SingUp';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App home-page">
       <BrowserRouter>
       <Switch>
         <Route path="/SingIn">
