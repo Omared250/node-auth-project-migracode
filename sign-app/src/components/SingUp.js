@@ -14,7 +14,7 @@ const SingUp = () => {
     }
 
     async function onSignUpClicked() {
-        const data = onSignUp(body);
+        const data = await onSignUp(body);
         setData(JSON.stringify(data))
     }
 
@@ -50,8 +50,8 @@ const SingUp = () => {
                     onChange={(event) => setPassword(event.target.value)}
                     />
                 </div>
-                <button type='submit' onClick={onSignUpClicked}>CREATE ACCOUNT</button>
-                <div><p>{data}</p></div>
+                <button onClick={onSignUpClicked}>CREATE ACCOUNT</button>
+                <div>{data}</div>
             </form>
         </div>
     );

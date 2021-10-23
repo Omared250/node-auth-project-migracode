@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import { onSingIn } from "../request/users";
 
 const SingIn = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [data, setData] = useState('');
 
-    
+    const body = {
+        email : email,
+        password : password
+    }
+
+    async function onSignInClicked() {
+        const data = await onSingIn(body);
+        console.log(data);
+        setData(JSON.stringify(data))
+    }
 
     return (
         <div className='sing'>
@@ -11,17 +24,29 @@ const SingIn = () => {
             <form>
                 <div className='inputs'>
                     <label htmlFor='email'>Email</label>
-                    <input type='email' placeholder='Enter your email!' id='email'></input>
+                    <input 
+                    type='email' 
+                    placeholder='Enter your email!' 
+                    id='email'
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                    />
                 </div>
                 <div className='inputs'>
                     <label htmlFor='password'>Password</label>
-                    <input type='text' placeholder='Enter your password!' id='password'></input>
+                    <input type='password' 
+                    placeholder='Enter your password!' 
+                    id='password'
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
+                    />
                 </div>
                 <div className='check'>
                     <input type='checkbox' htmlFor='rememberMe'></input>
                     <label id='rememberMe'>Remember me!</label>
                 </div>
-                <button type='submit'>SING IN</button>
+                <button type='submit' onClick={onSignInClicked}>SING IN</button>
+                <div>{data}</div>
             </form>
         </div>
     );
